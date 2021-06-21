@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    안녕히힣
+    <script>
+      const key =
+        "CQv4pHR7JvEc5P3i%2BVlM6j5NLXUMGXEx%2BparKLfR2GLUAzVYvzGK2o7KUjiBgyXOrhZbT%2F5LmgqLfhz9ILHY3Q%3D%3D";
+      const url = `http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/sido?ServiceKey==${key}`;
+
+      const getApi = async () => {
+        fetch(
+          `http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/sido?ServiceKey==${key}`,
+          {
+            method: "GET",
+            headers: { "Access-control-allow-origin": "*" },
+          }
+        )
+          .then(res => res.text())
+          .then(res => {
+            if (res) {
+              console.log(res);
+            }
+          });
+      };
+      getApi();
+    </script>
+  </body>
+</html>

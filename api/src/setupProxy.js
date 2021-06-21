@@ -7,8 +7,7 @@ const url = `http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicS
 module.exports = function (app) {
   app.use(
     createProxyMiddleware("/api", {
-      target:
-        "http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc",
+      target: "https://cors-anywhere.herokuapp.com",
       changeOrigin: true,
     })
   );
